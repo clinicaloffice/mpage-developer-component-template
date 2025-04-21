@@ -2,21 +2,26 @@
   "name": "mpage-developer-component-template",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "serve": "ng serve --extra-webpack-config webpack.partial.js -o",
+    "build": "ng build --single-bundle --extra-webpack-config webpack.partial.js && node concat.js"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^19.2.7",
+    "@angular/build": "^19.2.8",
+    "@angular/cdk": "^19.2.10",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",
+    "@angular/elements": "^19.2.7",
     "@angular/forms": "^19.2.0",
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@clinicaloffice/mpage-developer": "^0.0.2",
+    "concat": "^1.0.3",
+    "fs-extra": "^11.3.0",
+    "ngx-build-plus": "^19.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

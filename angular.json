@@ -51,7 +51,10 @@
                 "input": "public"
               }
             ],
-            "styles": [],
+            "styles": [
+              "src/styles.scss",
+              "src/clinical-office-styles.scss"
+            ],
             "extractLicenses": true,
             "sourceMap": false,
             "namedChunks": false,
@@ -109,7 +112,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/clinical-office-styles.scss"
             ],
             "scripts": []
           }

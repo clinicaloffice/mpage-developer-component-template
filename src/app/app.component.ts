@@ -10,7 +10,7 @@ declare const VERSION: string;
   imports: [MpageLogComponent, NgClass],
   templateUrl: './app.component.html',
   standalone: true,
-  styleUrl: '../styles.scss',
+  styleUrls: ['../styles.scss', '../clinical-office-styles.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.ShadowDom
 })
@@ -31,16 +31,6 @@ export class AppComponent implements OnInit {
 
     this.MPage.setMaxInstances(2, true, 'CHART', false);
 
-    if (this.title() !== 'Clinical Office 5 Component Test') {
-        this.person.get(14308939);
-    } else {
-      this.person.get();
-    }
-  }
-
-
-  public get version(): string {
-    return VERSION;
   }
 
 }

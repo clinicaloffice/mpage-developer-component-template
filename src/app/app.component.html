@@ -1,8 +1,11 @@
-<div [ngClass]="title() !== 'Clinical Office 5 Component Test' ? 'alternate-class' : ''">
-  <h1>Clinical Office: MPage Developer Zoneless Component running on Angular 19.2</h1>
+<div class="co-content">
+  <h1>Clinical Office: MPage Developer Zoneless Component running on Angular 20</h1>
   <h2>ShadowDOM</h2>
-  <h2>Version {{ version }}</h2>
   <p>The title of this MPage from Bedrock is {{ title() }}</p>
 
-  <mpage-log-component [properties]="{position: 'inline'}"></mpage-log-component>
+  <!-- If full page -->
+  <mpage-log-component></mpage-log-component>
+
+  <!-- If Component -->
+  <!-- <mpage-log-component [properties]="{position: 'inline'}"></mpage-log-component> -->
 </div>

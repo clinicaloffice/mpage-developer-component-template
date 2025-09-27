@@ -32,11 +32,12 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes, withHashLocation()),
     provideHttpClient(),
+    /*
     provideAppInitializer(() => {
       // Load the config.json file (if not using, remove the next two lines or the entire provideAppInitializer section.
       const configService = inject(ConfigService);
       return configService.loadConfig();
-    }),
+    }), */
     {provide: ErrorHandler, useClass: ErrorHandlerService}
   ]
 };

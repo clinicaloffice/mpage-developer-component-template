@@ -33,6 +33,7 @@ export class App implements OnInit {
   public MPage = inject(MPageService);
 
   public title: InputSignal<string> = input('default');
+  public path: InputSignal<string> = input('path');
 
   ngOnInit() {
     // Grab any parameters in the URL (Used in Cerner Components)

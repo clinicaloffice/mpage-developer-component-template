@@ -1,23 +1,36 @@
 import {ChangeDetectionStrategy, Component, inject, input, InputSignal, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {MPageService, MpageLogComponent, PersonService} from '@clinicaloffice/mpage-developer';
-import {NgClass} from '@angular/common';
+import {
+  MPageService,
+  MpageLogComponent,
+  AddressService,
+  AllergyService,
+  CodeValueService,
+  ConfigService,
+  CustomService,
+  DiagnosisService,
+  EncounterService,
+  ErrorHandlerService,
+  OrganizationService, PersonService, PhoneService, ProblemService, ReferenceService
+} from '@clinicaloffice/mpage-developer';
 
 declare const VERSION: string;
 
 @Component({
   selector: 'app-root',
-  imports: [MpageLogComponent, NgClass],
+  imports: [MpageLogComponent],
   templateUrl: './app.html',
   standalone: true,
   styleUrls: ['../styles.scss', '../clinical-office-styles.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  providers: [MPageService, AddressService, AllergyService, CodeValueService, ConfigService, CustomService,
+    DiagnosisService, EncounterService, ErrorHandlerService, OrganizationService, PersonService, PhoneService,
+    ProblemService, ReferenceService]
 })
 export class App implements OnInit {
   public activatedRoute = inject(ActivatedRoute);
   public MPage = inject(MPageService);
-  private person = inject(PersonService);
 
   public title: InputSignal<string> = input('default');
 

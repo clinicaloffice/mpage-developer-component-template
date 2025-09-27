@@ -86,6 +86,9 @@
         },
         "serve": {
           "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "mpage-developer-component-template:build:production"

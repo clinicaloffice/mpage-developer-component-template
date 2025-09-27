@@ -1,6 +1,8 @@
-# MpageDeveloperComponentTemplate
+# Clinical Office: MPage Developer - Component Template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Make sure you rename in all files to replace mpage-developer-component-template with the name of your project or your
+project will be compiled under the wrong name.
+
 
 ## Development server
 
@@ -31,7 +33,7 @@ ng generate --help
 To build the project run:
 
 ```bash
-ng build
+npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.

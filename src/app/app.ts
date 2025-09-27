@@ -8,13 +8,13 @@ declare const VERSION: string;
 @Component({
   selector: 'app-root',
   imports: [MpageLogComponent, NgClass],
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   standalone: true,
   styleUrls: ['../styles.scss', '../clinical-office-styles.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class AppComponent implements OnInit {
+export class App implements OnInit {
   public activatedRoute = inject(ActivatedRoute);
   public MPage = inject(MPageService);
   private person = inject(PersonService);

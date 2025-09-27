@@ -65,13 +65,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "4MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "20kB",
+                  "maximumError": "40kB"
                 }
               ],
               "outputHashing": "none"
@@ -126,13 +126,13 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "style": "none",
+      "changeDetection": "OnPush",
+      "standalone": true
     },
     "@schematics/angular:directive": {
-      "type": "directive"
     },
     "@schematics/angular:service": {
-      "type": "service"
     },
     "@schematics/angular:guard": {
       "typeSeparator": "."

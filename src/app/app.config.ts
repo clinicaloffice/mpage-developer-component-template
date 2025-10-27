@@ -1,13 +1,10 @@
 import {
   ApplicationConfig, ErrorHandler,
-  inject,
-  provideAppInitializer,
   provideZonelessChangeDetection
 } from '@angular/core';
 import {provideRouter, withHashLocation} from '@angular/router';
 
 import {routes} from './app.routes';
-import {ConfigService} from '@clinicaloffice/mpage-developer';
 import {ErrorHandlerService} from '@clinicaloffice/mpage-developer';
 import {provideHttpClient} from '@angular/common/http';
 
@@ -32,12 +29,6 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes, withHashLocation()),
     provideHttpClient(),
-    /*
-    provideAppInitializer(() => {
-      // Load the config.json file (if not using, remove the next two lines or the entire provideAppInitializer section.
-      const configService = inject(ConfigService);
-      return configService.loadConfig();
-    }), */
     {provide: ErrorHandler, useClass: ErrorHandlerService}
   ]
 };

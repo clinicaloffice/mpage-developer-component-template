@@ -106,7 +106,7 @@
 }
 
 .co-wdate {
-  width: 10em;
+  width: 11em !important;
 }
 
 /* MPage Table */
@@ -298,6 +298,10 @@ div.co-default-field {
     align-items: center;
     margin: 0 0.5em;
     height: 100%;
+  }
+
+  .co-input-color {
+    height: 1.5em !important;
   }
 
   .co-field-input {
@@ -590,8 +594,8 @@ div.dialog-button-bar {
 }
 
 .dialog-content {
-  padding: var(--dialog-padding);
-  background: var(--dialog-background);
+  padding: var(--dialog-content-padding);
+  background: var(--dialog-content-background);
 }
 
 .co-notification {

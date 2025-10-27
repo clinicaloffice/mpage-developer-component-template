@@ -117,9 +117,10 @@
       rgba(0, 0, 0, 0.08) 10px
   );
 
-  /* Dialog Content */
+  /* Dialog */
   --dialog-padding: 1em;
-  --dialog-background: inherit;
+  --dialog-content-padding: 1em 0;
+  --dialog-content-background: inherit;
 
   /* General Application Font/Page Settings */
   box-sizing: border-box;

@@ -11,7 +11,7 @@ import {
   DiagnosisService,
   EncounterService,
   ErrorHandlerService,
-  OrganizationService, PersonService, PhoneService, ProblemService, ReferenceService
+  OrganizationService, PersonService, PhoneService, ProblemService, ReferenceService, PrsnlService
 } from '@clinicaloffice/mpage-developer';
 
 declare const VERSION: string;
@@ -26,7 +26,7 @@ declare const VERSION: string;
   encapsulation: ViewEncapsulation.ShadowDom,
   providers: [MPageService, AddressService, AllergyService, CodeValueService, ConfigService, CustomService,
     DiagnosisService, EncounterService, ErrorHandlerService, OrganizationService, PersonService, PhoneService,
-    ProblemService, ReferenceService]
+    ProblemService, PrsnlService, ReferenceService]
 })
 export class App implements OnInit {
   public activatedRoute = inject(ActivatedRoute);

@@ -335,6 +335,7 @@ div.co-default-field {
 
 div.co-context-menu {
   overflow: auto;
+
   li {
     padding: 5px 5px 5px 5px;
   }
@@ -397,12 +398,17 @@ div.co-select-template, div.co-context-menu {
 .co-tabbed-menu {
   border: var(--tabbed-menu-border);
   background: var(--tabbed-menu-background);
+  margin: var(--tabbed-menu-margin);
+  padding: var(--tabbed-menu-padding);
+
   flex-wrap: wrap;
+  width: auto;
 
   > button {
     white-space: nowrap;
   }
 }
+
 
 /*
   ---------------------

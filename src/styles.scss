@@ -1,12 +1,14 @@
 /* Import Clinical Office: MPage Developer Standard Styles */
-@use 'clinical-office-styles';
+/* @use 'clinical-office-styles'; */
 
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined';
 @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
 
 /* Component Variables */
-:root {
+:host {
+  all: initial;
+
   /* Default Text Colors, Font settings */
   --text-color: black;
   --text-color-alternate: grey;
@@ -109,18 +111,23 @@
   --mpage-table-toolbar-drag-border: unset;
   --mpage-table-toolbar-drag-border-alternate: 2px solid;
   --mpage-table-toolbar-drag-border-radius: 0;
-  --mpage-table-empty-space-background: repeating-linear-gradient(
-      -30deg,
-      rgba(0, 0, 0, 0.04),
-      rgba(0, 0, 0, 0.04) 4px,
-      rgba(0, 0, 0, 0.08) 6px,
-      rgba(0, 0, 0, 0.08) 10px
-  );
+  --mpage-table-empty-space-background: repeating-linear-gradient(-30deg,
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.04) 4px,
+    rgba(0, 0, 0, 0.08) 6px,
+    rgba(0, 0, 0, 0.08) 10px);
 
   /* Dialog */
   --dialog-padding: 1em;
   --dialog-content-padding: 1em 0;
   --dialog-content-background: inherit;
+
+  /* Tabbed Menu */
+  --tabbed-menu-border: unset;
+  --tabbed-menu-background: inherit;
+  --tabbed-menu-margin: unset;
+  --tabbed-menu-padding: unset;
+
 
   /* General Application Font/Page Settings */
   box-sizing: border-box;
@@ -128,18 +135,20 @@
   font-size: var(--font-size);
   color: var(--text-color);
   margin: 0;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
 }
 
 * {
   padding: 0;
   margin: 0;
 }
+
 
 /* Custom Styles for this Page */
 

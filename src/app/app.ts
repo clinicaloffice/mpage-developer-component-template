@@ -10,7 +10,7 @@ import {
   CustomService,
   DiagnosisService,
   EncounterService,
-  ErrorHandlerService,
+  Dialog,
   OrganizationService, PersonService, PhoneService, ProblemService, ReferenceService, PrsnlService
 } from '@clinicaloffice/mpage-developer';
 
@@ -25,7 +25,7 @@ declare const VERSION: string;
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.ShadowDom,
   providers: [MPageService, AddressService, AllergyService, CodeValueService, ConfigService, CustomService,
-    DiagnosisService, EncounterService, ErrorHandlerService, OrganizationService, PersonService, PhoneService,
+    DiagnosisService, EncounterService, Dialog, OrganizationService, PersonService, PhoneService,
     ProblemService, PrsnlService, ReferenceService]
 })
 export class App implements OnInit {

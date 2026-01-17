@@ -122,6 +122,7 @@ div.co-table-container {
   max-width: 100%;
   max-height: 100%;
   overflow-x: auto;
+  overflow-y: clip;
   border: var(--mpage-table-container-border);
 }
 
@@ -129,7 +130,6 @@ table.co-table {
   display: block;
   max-width: 100%;
   width: fit-content;
-  overflow-x: auto;
   table-layout: fixed;
   background-color: var(--mpage-table-background-color);
 

@@ -127,14 +127,12 @@ div.co-table-container {
 }
 
 table.co-table {
-  display: block;
   max-width: 100%;
   width: fit-content;
   table-layout: fixed;
   background-color: var(--mpage-table-background-color);
 
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
 
   th, td {
     white-space: nowrap;

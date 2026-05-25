@@ -11,7 +11,7 @@ import {
   DiagnosisService,
   EncounterService,
   Dialog,
-  OrganizationService, PersonService, PhoneService, ProblemService, ReferenceService, PrsnlService
+  OrganizationService, PersonService, PhoneService, ProblemService, ReferenceService, PrsnlService, MPageLogService
 } from '@clinicaloffice/mpage-developer';
 
 declare const VERSION: string;
@@ -24,7 +24,7 @@ declare const VERSION: string;
   styleUrls: ['../styles.scss', '../clinical-office-styles.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.ShadowDom,
-  providers: [MPageService, AddressService, AllergyService, CodeValueService, ConfigService, CustomService,
+  providers: [MPageService, MPageLogService, AddressService, AllergyService, CodeValueService, ConfigService, CustomService,
     DiagnosisService, EncounterService, Dialog, OrganizationService, PersonService, PhoneService,
     ProblemService, PrsnlService, ReferenceService]
 })
@@ -34,13 +34,16 @@ export class App implements OnInit {
 
   public title: InputSignal<string> = input('default');
   public path: InputSignal<string> = input('path');
+  public person_id: InputSignal<number> = input(-1);
+  public encntr_id: InputSignal<number> = input(-1);
+  public prsnl_id: InputSignal<number> = input(-1);
 
   ngOnInit() {
-    // Grab any parameters in the URL (Used in Cerner Components)
+    // Collect any parameters in the URL (Used in Cerner Components)
     this.activatedRoute.queryParams.subscribe(params => {
-      this.MPage.personId = params['personId'] ? parseInt(params['personId']) : this.MPage.personId;
-      this.MPage.encntrId = params['encounterId'] ? parseInt(params['encounterId']) : this.MPage.encntrId;
-      this.MPage.prsnlId = params['userId'] ? parseInt(params['userId']) : this.MPage.prsnlId;
+      this.MPage.personId = params['personId'] ? parseInt(params['personId']) : this.person_id() !== -1 ? this.person_id() : this.MPage.personId;
+      this.MPage.encntrId = params['encounterId'] ? parseInt(params['encounterId']) : this.encntr_id() !== -1 ? this.encntr_id() : this.MPage.encntrId;
+      this.MPage.prsnlId = params['userId'] ? parseInt(params['userId']) : this.prsnl_id() !== -1 ? this.prsnl_id() : this.MPage.prsnlId;
     });
 
     this.MPage.setMaxInstances(2, true, 'CHART', false);
